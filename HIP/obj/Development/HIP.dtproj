@@ -16,16 +16,16 @@
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{bc559808-d5d2-4218-9716-e37b832d4067}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">HIP</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionComments">First Basic version</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionComments">
+          </SSIS:Property>
           <SSIS:Property SSIS:Name="CreationDate">2016-07-22T14:28:07.4307508+01:00</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorName">MAMASANDPAPAS\m_haigh</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">MP004146</SSIS:Property>
-          <SSIS:Property SSIS:Name="Description">
-          </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAABTRivuNU9/JWgr5wKae+2CAAAAAASAAACgAAAAEAAAAPloctW7xhSiRp/hbinuuq6IAAAA5oAP1uszJkycm0TOdVXwhnhZHJQK7racCQiDpMV9dlKMVZuASu0K/hyQXCEoMGtIuAcFH+Bu1J1VRLxNMFmujgHdZ6Uo8zyUoPJCf9bQ7ylwIxPNfQ6/XpV784zWS8Gnoc8a9hJNFQP0vhsuc9yZr19jS1Mlqz3PMoko7fHEc028lNJg/zr6txQAAAAKCMBGmTGUUjkblV9ePScPMmLmEg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="Description">Changes to handle GoogleFeeds files (Issue#1)</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAABIFmvvVH9MiIJExZ9ZyBCQAAAAAASAAACgAAAAEAAAAGABuKs6ypVrlLjy87yExcuIAAAA9hT+R7AJrtMAIWBSJpMFAXZYkCqLu8+O3QbXy/pNG3kmzpUCgpwqoIim01C1J7OwziU5jVQQ7I8BLamaZFz5kXwj17o7wPL1gOpW/16kcTgeegWsaH3fgUtnzn38GWLY0paLLFktXf0JP5snQCJt9vx7t2We20jCK7fv54n62W/RwKqtl5GpURQAAADwAz9MTgrOZaJ7n2yGTqXhpvbxPQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
