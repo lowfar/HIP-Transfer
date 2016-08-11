@@ -18,14 +18,14 @@
           <SSIS:Property SSIS:Name="Name">HIP</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionComments">Handles GoogleFeeds copy destination</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionComments">First Basic version</SSIS:Property>
           <SSIS:Property SSIS:Name="CreationDate">2016-07-22T14:28:07.4307508+01:00</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorName">MAMASANDPAPAS\m_haigh</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">MP004146</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAAA3AvKlE6fpxHrHKQH1ZylJAAAAAASAAACgAAAAEAAAAEL27gZSNS8MQHgFWLYSskyIAAAA4u2xoB1Cxcb1+I4IY+TSYbKE1k8Co5iOsT9dyceCaaSN02xtU5EWY7Yev74p5bAdPE6JtnzV8JovfTob4Owp9dZUBXczlmw5QF5ZhX+PgWXSalqmoZGF8W64mDJViKjNYZGG/V9VzMAPeeCR+v6L3bxCuwvPJWbGD8AfZ6S5U1JYS6boco1qoRQAAACM/BBfeLW2LX37pHgbIInm01niCQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAABTRivuNU9/JWgr5wKae+2CAAAAAASAAACgAAAAEAAAAPloctW7xhSiRp/hbinuuq6IAAAA5oAP1uszJkycm0TOdVXwhnhZHJQK7racCQiDpMV9dlKMVZuASu0K/hyQXCEoMGtIuAcFH+Bu1J1VRLxNMFmujgHdZ6Uo8zyUoPJCf9bQ7ylwIxPNfQ6/XpV784zWS8Gnoc8a9hJNFQP0vhsuc9yZr19jS1Mlqz3PMoko7fHEc028lNJg/zr6txQAAAAKCMBGmTGUUjkblV9ePScPMmLmEg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
