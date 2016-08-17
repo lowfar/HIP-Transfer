@@ -60,7 +60,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varCopyDirectoryPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-uk\TransferedFiles</DTS:VariableValue>
+        DTS:DataType="8">\\MPHYBRISTEST01\d$\HybrisData\mamasnpapas-uk\TransferedFiles</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -94,7 +94,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varDuration">
       <DTS:VariableValue
-        DTS:DataType="3">1474411433</DTS:VariableValue>
+        DTS:DataType="3">1983475534</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -136,7 +136,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogDate">
       <DTS:VariableValue
-        DTS:DataType="8">2016081113583100</DTS:VariableValue>
+        DTS:DataType="8">2016081711225500</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -148,7 +148,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081113583100_0</DTS:VariableValue>
+        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081711225500_0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -173,7 +173,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogLocation">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\D$\HIP\Logs</DTS:VariableValue>
+        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -185,7 +185,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogShortDate">
       <DTS:VariableValue
-        DTS:DataType="8">20160811</DTS:VariableValue>
+        DTS:DataType="8">20160817</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -207,7 +207,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSourceDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-uk</DTS:VariableValue>
+        DTS:DataType="8">\\MPHYBRISTEST01\d$\HybrisData\mamasnpapas-uk</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -238,7 +238,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSummaryLog">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\D$\HIP\Logs\Send_mamasandpapas_uk_20160811</DTS:VariableValue>
+        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs\Send_mamasandpapas_uk_20160817</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -344,7 +344,7 @@
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\TheSendSource\D$\HIP\Logs\Send_mamasandpapas_uk_20160811"
+          LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Send_mamasandpapas_uk_20160817"
           LogFileAppend="True"
           LogDateTime="True"
           DateTimeFormat="HH:mm:ss"
@@ -368,7 +368,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="\\TheSendSource\d$\HybrisData\mamasnpapas-uk" />
+              Folder="\\MPHYBRISTEST01\d$\HybrisData\mamasnpapas-uk" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -2442,7 +2442,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               LogVariableName=""
               MessageType="Information"
               LogMode="File"
-              LogFilePath="\\TheSendSource\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081113583100_0"
+              LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081711225500_0"
               LogFileAppend="True"
               LogDateTime="True"
               DateTimeFormat="HH:mm:ss:fff"
@@ -3157,7 +3157,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\TheSendSource\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081113583100_0"
+          LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Send_mamasandpapas_uk_{A00C8936-7188-4C58-8295-F60A29F86D78}_2016081711225500_0"
           LogFileAppend="False"
           LogDateTime="False"
           DateTimeFormat="HH:mm:ss"

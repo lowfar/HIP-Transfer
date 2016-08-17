@@ -48,7 +48,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varDuration">
       <DTS:VariableValue
-        DTS:DataType="3">1478007646</DTS:VariableValue>
+        DTS:DataType="3">1983475180</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -101,7 +101,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogDate">
       <DTS:VariableValue
-        DTS:DataType="8">2016081114582700</DTS:VariableValue>
+        DTS:DataType="8">2016081711225500</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -113,7 +113,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081114582700_0</DTS:VariableValue>
+        DTS:DataType="8">\\DestinationA\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081711225500_0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -138,7 +138,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogLocation">
       <DTS:VariableValue
-        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs</DTS:VariableValue>
+        DTS:DataType="8">\\DestinationA\D$\HIP\Logs</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -150,7 +150,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogShortDate">
       <DTS:VariableValue
-        DTS:DataType="8">20160811</DTS:VariableValue>
+        DTS:DataType="8">20160817</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -172,7 +172,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSourceDirectory">
       <DTS:VariableValue
-        DTS:DataType="8">\\172.24.80.137\master\mamasnpapas-eu\out</DTS:VariableValue>
+        DTS:DataType="8">\\171.99.99.999\master\mamasnpapas-eu\out</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -203,7 +203,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSummaryLog">
       <DTS:VariableValue
-        DTS:DataType="8">\\MPHYBRISTEST01\D$\HIP\Logs\Out_mamasandpapas_eu_20160811</DTS:VariableValue>
+        DTS:DataType="8">\\DestinationA\D$\HIP\Logs\Out_mamasandpapas_eu_20160817</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -309,7 +309,7 @@
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Out_mamasandpapas_eu_20160811"
+          LogFilePath="\\DestinationA\D$\HIP\Logs\Out_mamasandpapas_eu_20160817"
           LogFileAppend="True"
           LogDateTime="True"
           DateTimeFormat="HH:mm:ss"
@@ -333,7 +333,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="\\172.24.80.137\master\mamasnpapas-eu\out" />
+              Folder="\\171.99.99.999\master\mamasnpapas-eu\out" />
             <FEFEProperty
               FileSpec="*.*" />
             <FEFEProperty
@@ -2370,7 +2370,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               LogVariableName=""
               MessageType="Information"
               LogMode="File"
-              LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081114582700_0"
+              LogFilePath="\\DestinationA\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081711225500_0"
               LogFileAppend="True"
               LogDateTime="True"
               DateTimeFormat="HH:mm:ss:fff"
@@ -3077,7 +3077,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\MPHYBRISTEST01\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081114582700_0"
+          LogFilePath="\\DestinationA\D$\HIP\Logs\Out_mamasandpapas_eu_{234B70DF-302B-41E6-A05D-F7FD7039AEF1}_2016081711225500_0"
           LogFileAppend="False"
           LogDateTime="False"
           DateTimeFormat="HH:mm:ss"

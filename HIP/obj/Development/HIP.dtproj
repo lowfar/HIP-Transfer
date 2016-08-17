@@ -25,7 +25,7 @@
           <SSIS:Property SSIS:Name="CreatorName">MAMASANDPAPAS\m_haigh</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">MP004146</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">Changes to handle GoogleFeeds files (Issue#1)</SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAABIFmvvVH9MiIJExZ9ZyBCQAAAAAASAAACgAAAAEAAAAGABuKs6ypVrlLjy87yExcuIAAAA9hT+R7AJrtMAIWBSJpMFAXZYkCqLu8+O3QbXy/pNG3kmzpUCgpwqoIim01C1J7OwziU5jVQQ7I8BLamaZFz5kXwj17o7wPL1gOpW/16kcTgeegWsaH3fgUtnzn38GWLY0paLLFktXf0JP5snQCJt9vx7t2We20jCK7fv54n62W/RwKqtl5GpURQAAADwAz9MTgrOZaJ7n2yGTqXhpvbxPQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAAAbKnYyrmLa+n2MkhgAZD4XAAAAAASAAACgAAAAEAAAAB681rVnjb/iq/HF9yR+YjyIAAAAdYvjFJgW9VQCpbByakYzD3Y1slayfRdlFWaLOFcPZ7bZCrbReqlqcvDpr+J+TnPWpYw6nvHCkkV9p6g16YZFygUD4t6KRX5K0Ii5iw9w+ezMiYg7EmeL+0K1UHA/u4YegM5HKYnbBTJfMOpcRhtS6Eh/6N+WBGHEEM5f4CyN7M9INRm69k+e2xQAAACpp7KKCl9Oocipj2ZKHmw04fK7Jw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -578,10 +578,10 @@
                 <SSIS:Property SSIS:Name="Name">Send_mamasandpapas_common</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">109</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">114</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{F2A0C5B5-9AE3-44C6-9436-49590D6705B1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CF66B843-4B1C-4B6C-80D5-9960EA49285A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
