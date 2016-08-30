@@ -24,8 +24,8 @@
           <SSIS:Property SSIS:Name="CreationDate">2016-07-22T14:28:07.4307508+01:00</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorName">MAMASANDPAPAS\m_haigh</SSIS:Property>
           <SSIS:Property SSIS:Name="CreatorComputerName">MP004146</SSIS:Property>
-          <SSIS:Property SSIS:Name="Description">Added Expression Task to set varDuration (Issue#9)</SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAAAhyrQj/BCItVWAtqxZrC5hAAAAAASAAACgAAAAEAAAABXzUqFobR6ji4BHLZuLGzWIAAAAxbd8TCSIRdXdF0ANLKp1BrKsun8Xl2BqsP5Dtf4xa6RItjKyH9d79MnsL2T83Ev84oXs6HzaOxtQiz7mlDuz/F5SkTyA1VsdjB9h+K6K1Yr2d++zJ3ByGH7kJhESg9jOor47i4TGK6SCEbjU8yq/PThG6N2hVwNv5h+9lya+KtK1/D8zFOQQRRQAAAACjJVmHc53OEV6lJZ1w3uv4xPW9A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="Description">Enhancement (Issue#13): Handle Report Files</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnd4vJqQcfky0wFb45gUm9QAAAAACAAAAAAADZgAAwAAAABAAAABXQP1GGE0dFXG/8xKrGJaYAAAAAASAAACgAAAAEAAAABbKOubT+qI7Z/XsuGykW4OIAAAA1+FF8Ff9MnLlCg01n2V/76ZMyNtzQt8TTsyZMFjVkmRKlN3X/r32L6tF7zqcgGeMFs/Q5eSLpHIVonJPYNT+MHHA6y20LOTkPP4s0TIjKBPY1MYiAdOPOj9LLqr6jEWb0FrmEH1vTPtOPLnFst4re9dz4ER6yvZtgoaxAwJP1RBF3fzXQm/1IhQAAAA/+TiJpxH14d6p4bc8nh/jmBoAhA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -75,10 +75,10 @@
                 <SSIS:Property SSIS:Name="Name">Out_mamasandpapas_us</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">85</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">91</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4983F355-E2C9-4B1E-ABF3-56467911D2C9}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C5B12652-94A7-4623-9D00-300F7708B5A1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -92,10 +92,10 @@
                 <SSIS:Property SSIS:Name="Name">Out_mamasandpapas_uk</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">87</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">91</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E90BD22B-FA52-4DAD-AE3E-F6EADD9ACFA6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{73F13D71-465C-47AD-98B1-0CC94B1E0929}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -109,10 +109,10 @@
                 <SSIS:Property SSIS:Name="Name">Out_mamasandpapas_ie</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">88</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">91</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5CF6204F-EB7A-4A83-9B29-1324F90BDF7B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E2A323BD-7873-4206-908C-ABDE4C2F3A22}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -126,10 +126,10 @@
                 <SSIS:Property SSIS:Name="Name">Out_mamasandpapas_eu</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">88</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">92</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9874CB91-0CAD-4F30-8321-845C326F94CC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C3A6C08A-53C0-45E2-A57E-E48612FCF291}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -143,10 +143,10 @@
                 <SSIS:Property SSIS:Name="Name">Out_mamasandpapas_common</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">106</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">109</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1863049E-FDA7-4D7E-9501-2724724F2426}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5899DF6E-077E-4882-BE7A-905279C51EC9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

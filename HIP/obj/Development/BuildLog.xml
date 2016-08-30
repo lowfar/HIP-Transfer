@@ -2,98 +2,98 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>HIP</Name>
-    <LastWriteTime>2016-08-19T11:25:56.4148357Z</LastWriteTime>
+    <LastWriteTime>2016-08-25T12:40:29.1815542Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Master_Out.dtsx</Name>
-      <LastWriteTime>2016-08-16T15:18:42.2204793Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.36418Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Out_mamasandpapas_us.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:18:16.5437005Z</LastWriteTime>
+      <LastWriteTime>2016-08-25T11:19:56.2376939Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Out_mamasandpapas_uk.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:17:13.0137179Z</LastWriteTime>
+      <LastWriteTime>2016-08-25T10:49:04.2968761Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Out_mamasandpapas_ie.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:16:04.9477507Z</LastWriteTime>
+      <LastWriteTime>2016-08-25T10:47:26.9830849Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Out_mamasandpapas_eu.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:14:49.0579111Z</LastWriteTime>
+      <LastWriteTime>2016-08-25T10:43:31.9992419Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Out_mamasandpapas_common.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:13:17.6999965Z</LastWriteTime>
+      <LastWriteTime>2016-08-25T11:21:05.8648711Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_mamasandpapas_us.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:11:29.7249895Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:56.0092376Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_mamasandpapas_uk.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:10:08.030416Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.9721192Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_mamasandpapas_ie.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:08:25.9516641Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.936004Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_mamasandpapas_eu.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:07:11.7746852Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.8988856Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_mamasandpapas_common.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:20:43.3614961Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.8627704Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master_Send.dtsx</Name>
-      <LastWriteTime>2016-08-16T15:18:42.2484793Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.4303912Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_Product_common.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:03:33.9829455Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.6791848Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_Product_eu.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:02:05.2320456Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.7173064Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_Product_ie.dtsx</Name>
-      <LastWriteTime>2016-08-19T11:00:17.6533192Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.755428Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_Product_uk.dtsx</Name>
-      <LastWriteTime>2016-08-19T10:58:16.4421673Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.7915432Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Send_Product_us.dtsx</Name>
-      <LastWriteTime>2016-08-19T10:54:16.0445945Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.8286616Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master_Product.dtsx</Name>
-      <LastWriteTime>2016-08-17T14:11:43.0997152Z</LastWriteTime>
+      <LastWriteTime>2016-08-24T15:00:55.3972856Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
