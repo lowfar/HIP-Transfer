@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/30/2016 9:58:22 AM"
@@ -11,13 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Master_Customer"
   DTS:PackageType="5"
-<<<<<<< HEAD
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{4495CA0F-49C0-4BC8-81B5-D88D8BDB3E14}">
-=======
   DTS:VersionBuild="2"
   DTS:VersionGUID="{0710E381-F20A-454D-BBA3-9A1EA3F317EF}">
->>>>>>> issue_18/matth
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -43,10 +38,7 @@
       DTS:refId="Package\Customer Eu"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
       DTS:Disabled="True"
->>>>>>> issue_18/matth
       DTS:DTSID="{9C7AFC5C-9C7B-4757-95CF-014BA746D96E}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -64,10 +56,7 @@
       DTS:refId="Package\Customer Ie"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
       DTS:Disabled="True"
->>>>>>> issue_18/matth
       DTS:DTSID="{EEAF1857-03F1-4F5D-9066-E228EC778AAF}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -85,10 +74,7 @@
       DTS:refId="Package\Customer Uk"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
       DTS:Disabled="True"
->>>>>>> issue_18/matth
       DTS:DTSID="{BA996C3C-141C-407E-B955-46E36FEFFC48}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
@@ -106,10 +92,7 @@
       DTS:refId="Package\Customer Us"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
       DTS:Disabled="True"
->>>>>>> issue_18/matth
       DTS:DTSID="{189D7922-DE50-4601-A99A-2DE885656742}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"

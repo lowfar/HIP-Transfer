@@ -5,21 +5,21 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MP004146"
   DTS:CreatorName="MAMASANDPAPAS\m_haigh"
-  DTS:DTSID="{6922D76F-E494-4580-B05E-A05F19586E49}"
+  DTS:DTSID="{856AB98A-8DA3-4D1F-81FC-C665F0142F05}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="12.0.4100.1"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Send_Product_ie"
+  DTS:ObjectName="Send_Customer_ie"
   DTS:PackageType="5"
-  DTS:VersionBuild="110"
-  DTS:VersionGUID="{9A034145-00C5-4C7B-BAD2-3E542AA279A1}">
+  DTS:VersionBuild="111"
+  DTS:VersionGUID="{CD874D47-C161-4876-A001-426EE90FF819}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[MPSQL08.dba]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{76840EB2-E3D4-44DE-AABD-C54841615536}"
+      DTS:DTSID="{C9E3BE85-D9E5-4A61-B128-03249BE2295A}"
       DTS:ObjectName="MPSQL08.dba">
       <DTS:ObjectData>
         <DTS:ConnectionManager
@@ -32,7 +32,7 @@
       DTS:ConfigString="MPSQL08.dba"
       DTS:CreationName="Microsoft.LogProviderSQLServer"
       DTS:Description="Writes log entries for events to a SQL Server database"
-      DTS:DTSID="{9B4B13F4-9FF9-485B-8604-7E9BD1B47229}"
+      DTS:DTSID="{4270EC30-3102-40A4-8C4C-7DC62A3F38FC}"
       DTS:ObjectName="SSIS log provider for SQL Server">
       <DTS:ObjectData>
         <InnerObject />
@@ -42,7 +42,7 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{50956B7A-B546-4A7C-830E-939FAD216A02}"
+      DTS:DTSID="{21713410-4017-4F43-B462-2B70CCB46F76}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[$Project::PParArchiveDirectory]"
       DTS:IncludeInDebugDump="2345"
@@ -53,7 +53,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{9910E83D-043A-4D8A-B8AD-A183D886C94D}"
+      DTS:DTSID="{0EC49097-02B4-4311-A11B-FA6B83FE6E00}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varSourceDirectory] + &quot;\\&quot; + @[User::varCopyDirectory]"
       DTS:IncludeInDebugDump="2345"
@@ -64,40 +64,40 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{96EAE26C-9F02-4BC1-9A9D-750E791CA691}"
+      DTS:DTSID="{F805F63F-C838-420B-9B1C-ECC18F58A035}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="REPLACE( @[User::varSourceFileFullPath], @[User::varSourceDirectory], @[User::varCopyDirectoryPath])"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varCopyFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSourceB\d$\HybrisData\mamasnpapas-ie\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\d$\HybrisData\mamasnpapas-ie\TransferedFiles\product_20160817123456.xml</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Full path of the destination file"
-      DTS:DTSID="{23BDDC3C-3162-44AF-9FF2-77FEA5163425}"
+      DTS:DTSID="{E04FDFB8-C719-4670-84DF-AC5A1F4C5134}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="REPLACE(REPLACE(@[User::varSourceFileFullPath],@[User::varSourceDirectory],@[$Project::PParDestinationSend] + &quot;\\master\\mamasnpapas-ie&quot;),&quot;.xml&quot;,&quot;.tmp&quot;)"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSourceB\d$\HybrisData\mamasnpapas-ie\product_20160817123456.tmp</DTS:VariableValue>
+        DTS:DataType="8">\\172.88.88.888\master\mamasnpapas-ie\product_20160817123456.tmp</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E00ECD67-C0CC-4CDA-9C4B-961D4BA898E8}"
+      DTS:DTSID="{95C1AF40-26D8-410F-BA3A-4419C4185C78}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDuration">
       <DTS:VariableValue
-        DTS:DataType="3">1994026276</DTS:VariableValue>
+        DTS:DataType="3">1989326550</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Counts of files processed"
-      DTS:DTSID="{AF005A1F-9DA4-4FDC-8B10-0FC444EE1D5C}"
+      DTS:DTSID="{4A105D7C-1B03-40EA-976F-A220A53824DA}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varFileCount">
@@ -106,7 +106,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{125FF3F0-FD73-4BAE-9711-F98094FD3861}"
+      DTS:DTSID="{3701098E-80B6-46DF-87D0-7C4F2A01B6A7}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varFileCount]&lt;=1?@[User::varFileCount]:@[User::varFileCount]-1"
       DTS:IncludeInDebugDump="2345"
@@ -117,7 +117,18 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{FBCECC0E-F914-4FB6-8E2B-3E914847E1FB}"
+      DTS:DTSID="{36BA13ED-FD3B-4FC6-A736-5AC03127398E}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="RIGHT( @[User::varSourceFileFullPath], FINDSTRING( REVERSE( @[User::varSourceFileFullPath] ), &quot;\\&quot;, 1 ) - 1 )"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFilename">
+      <DTS:VariableValue
+        DTS:DataType="8">product_20160817123456.xml</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{AFD5F584-1671-4FF3-A676-2C4A9836818D}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varFilesHaveBeenProcessed">
@@ -127,31 +138,31 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Formated date including milliseconds used in Log file name"
-      DTS:DTSID="{C841D583-3AAB-4F6A-9148-9853E887C290}"
+      DTS:DTSID="{52C7D92D-0176-4599-85AF-8EDCF3ED224E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;20&quot; +&#xA;RIGHT((DT_STR,4,1252)DATEPART(&quot;yyyy&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Month&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Day&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Hh&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;mi&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;s&quot;,@[System::StartTime]),2) +&#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Ms&quot;,@[System::StartTime]),2) "
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varLogDate">
       <DTS:VariableValue
-        DTS:DataType="8">2016091910421600</DTS:VariableValue>
+        DTS:DataType="8">2016091910421700</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Log file full path"
-      DTS:DTSID="{FA4A3CBB-3280-4A19-A774-958DB6EA657D}"
+      DTS:DTSID="{A6E03D03-70F2-4A1E-ADEA-01B19F5E5E23}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLogLocation] + &quot;\\&quot; +  @[System::PackageName] + &quot;_&quot; +  @[System::PackageID] + &quot;_&quot; + @[User::varLogDate] + &quot;_&quot; + (DT_WSTR, 20 )@[System::ServerExecutionID]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varLogFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_ie_{6922D76F-E494-4580-B05E-A05F19586E49}_2016091910421600_0</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Customer_ie_{856AB98A-8DA3-4D1F-81FC-C665F0142F05}_2016091910421700_0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Header row for log file"
-      DTS:DTSID="{714562C0-05DE-40EC-9022-CFF2E32206D5}"
+      DTS:DTSID="{EA25577B-3D27-4295-9D23-B81BD2CE6C6E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;Timestamp,Package,Message,StartTime,Size,ExecutionId,PackageVersion,Duration&quot; + &quot;\r\n&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -164,7 +175,7 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Directory for Log file"
-      DTS:DTSID="{963A97FE-7C55-47E5-A796-709E4E3AD03C}"
+      DTS:DTSID="{1E5E3319-996F-49B4-8B49-7427173C003B}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[$Project::PParSourceSend]+&quot;\\D$\\HIP\\Logs&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -176,7 +187,7 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Short date yyyymmdd"
-      DTS:DTSID="{496AFCD2-C0C1-4520-8ACF-591E4EDEC1CC}"
+      DTS:DTSID="{4FBCE3B6-7B00-44AF-A9E2-DFC6BA5F194B}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="&quot;20&quot; +&#xA;RIGHT((DT_STR,4,1252)DATEPART(&quot;yyyy&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Month&quot;,@[System::StartTime]),2) + &#xA;RIGHT(&quot;0&quot; + (DT_STR,2,1252)DATEPART(&quot;Day&quot;,@[System::StartTime]),2)"
       DTS:IncludeInDebugDump="2345"
@@ -187,19 +198,19 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{05A907F5-447D-4588-AD80-1A7E13153399}"
+      DTS:DTSID="{5F12312C-CC62-40DC-8D25-DD90D5B2DE0D}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="REPLACE(@[User::varDestinationFileFullPath],&quot;.tmp&quot;,&quot;.xml&quot;)"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varRenameFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSourceB\d$\HybrisData\mamasnpapas-ie\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\172.88.88.888\master\mamasnpapas-ie\product_20160817123456.xml</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Size of the Source File. Value used in logging."
-      DTS:DTSID="{EA6AF24A-239F-4659-9C9D-A2D69873AA01}"
+      DTS:DTSID="{D0B78419-A495-4A25-820A-A4EC373F661B}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSize">
@@ -209,7 +220,7 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Location of files to be transfered"
-      DTS:DTSID="{A56F6BB7-F053-4550-B902-BDE3873ACF16}"
+      DTS:DTSID="{F899245F-6EDC-41B7-A6D8-9E9BA6776E56}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[$Project::PParSourceSend] + &quot;\\d$\\HybrisData\\mamasnpapas-ie&quot;"
       DTS:IncludeInDebugDump="2345"
@@ -221,17 +232,17 @@
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Full path of the file to be transfered"
-      DTS:DTSID="{D24EBDFD-4C86-46FD-AA57-8FD64034DD0F}"
+      DTS:DTSID="{1EBA2824-106F-462A-AF33-54C7A21EB27C}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSourceB\d$\HybrisData\mamasnpapas-ie\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\d$\HybrisData\mamasnpapas-ie\product_20160817123456.xml</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Star"
-      DTS:DTSID="{1E143623-7F6F-4579-B43D-F6D76E102FF4}"
+      DTS:DTSID="{30078EC1-E2C4-492B-B412-3BEB7EBE1E6D}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varStartTime">
@@ -240,14 +251,14 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{B25AD5CD-35BD-4E11-B53A-71FB180F571C}"
+      DTS:DTSID="{8FFE46D2-357F-4FD1-87C7-345DB717097E}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="@[User::varLogLocation]+&quot;\\&quot; + @[System::PackageName]  + &quot;_&quot; + @[User::varLogShortDate]"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varSummaryLog">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_ie_20160919</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Customer_ie_20160919</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -298,7 +309,7 @@
       DTS:refId="Package\Clean Up Log File"
       DTS:CreationName="Microsoft.FileSystemTask"
       DTS:Description="Deletes unwanted log file"
-      DTS:DTSID="{0CC96EA8-3098-43BC-A893-014FA24FA989}"
+      DTS:DTSID="{BEC4771F-E331-457D-BFD5-F2D06189BF80}"
       DTS:ExecutableType="Microsoft.FileSystemTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Clean Up Log File"
@@ -318,7 +329,7 @@
       DTS:refId="Package\Have any files been processed"
       DTS:CreationName="Microsoft.ExpressionTask"
       DTS:Description="Evaluates true if files have been processed, false if no files processed"
-      DTS:DTSID="{03110749-572B-4FCC-B97C-6BF46CCD302A}"
+      DTS:DTSID="{C1005A53-C778-44F4-9EE9-62580C2A8A01}"
       DTS:ExecutableType="Microsoft.ExpressionTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Have any files been processed"
@@ -336,7 +347,7 @@
       DTS:refId="Package\Log Summary"
       DTS:CreationName="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:Description="ZS Logging Task"
-      DTS:DTSID="{ED8A36DD-8FCF-41D2-B1AB-DF56680F012B}"
+      DTS:DTSID="{4BA2AFA5-A79E-44E0-8FFD-3D484DA3F18B}"
       DTS:ExecutableType="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="Log Summary"
@@ -353,7 +364,7 @@
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_ie_20160919"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Customer_ie_20160919"
           LogFileAppend="True"
           LogDateTime="True"
           DateTimeFormat="HH:mm:ss"
@@ -364,14 +375,14 @@
       DTS:refId="Package\Loop Source Directory"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="ForEach loop over directory. Directory location set in varSourceDirectory"
-      DTS:DTSID="{48D98A18-87AD-44E2-9E29-33FF86924DC3}"
+      DTS:DTSID="{BBC7738D-4D42-444A-A41F-808029418C98}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Loop Source Directory">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{936ED247-30E0-4D8F-B8A9-5CD14E1935F4}"
-        DTS:ObjectName="{936ED247-30E0-4D8F-B8A9-5CD14E1935F4}">
+        DTS:DTSID="{A1D1478E-394E-456B-8414-2EBB40155329}"
+        DTS:ObjectName="{A1D1478E-394E-456B-8414-2EBB40155329}">
         <DTS:PropertyExpression
           DTS:Name="Directory">@[User::varSourceDirectory]</DTS:PropertyExpression>
         <DTS:ObjectData>
@@ -379,7 +390,7 @@
             <FEFEProperty
               Folder="\\SendSource\d$\HybrisData\mamasnpapas-ie" />
             <FEFEProperty
-              FileSpec="Product_*.*" />
+              FileSpec="Customer_*.*" />
             <FEFEProperty
               FileNameRetrievalType="0" />
             <FEFEProperty
@@ -612,7 +623,7 @@
         </DTS:Property>
         <DTS:SelectedLogProviders>
           <DTS:SelectedLogProvider
-            DTS:InstanceID="{9B4B13F4-9FF9-485B-8604-7E9BD1B47229}" />
+            DTS:InstanceID="{4270EC30-3102-40A4-8C4C-7DC62A3F38FC}" />
         </DTS:SelectedLogProviders>
       </DTS:LoggingOptions>
       <DTS:Executables>
@@ -620,7 +631,7 @@
           DTS:refId="Package\Loop Source Directory\Archive File"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="File System Task"
-          DTS:DTSID="{35116108-FE03-4D72-ABB3-B9D536AD8418}"
+          DTS:DTSID="{1DC06A38-0045-42CA-8CF5-038D478F497E}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Archive File"
@@ -640,7 +651,7 @@
           DTS:refId="Package\Loop Source Directory\Copy File"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="File System Task to copy the source file to the destination"
-          DTS:DTSID="{05CA0D54-2027-42B2-8A71-1EE5785F757A}"
+          DTS:DTSID="{069CA18A-996D-49BF-822C-21A2CC6E94F2}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Copy File"
@@ -889,7 +900,7 @@
             </DTS:Property>
             <DTS:SelectedLogProviders>
               <DTS:SelectedLogProvider
-                DTS:InstanceID="{9B4B13F4-9FF9-485B-8604-7E9BD1B47229}" />
+                DTS:InstanceID="{4270EC30-3102-40A4-8C4C-7DC62A3F38FC}" />
             </DTS:SelectedLogProviders>
           </DTS:LoggingOptions>
           <DTS:ObjectData>
@@ -905,7 +916,7 @@
           DTS:refId="Package\Loop Source Directory\Delete File"
           DTS:CreationName="Microsoft.FileSystemTask"
           DTS:Description="Delete source file"
-          DTS:DTSID="{3C5D29E7-EE09-4E15-9DB3-815074118581}"
+          DTS:DTSID="{320A6282-5E52-455E-9A5F-478125AAA236}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Delete File"
@@ -1154,7 +1165,7 @@
             </DTS:Property>
             <DTS:SelectedLogProviders>
               <DTS:SelectedLogProvider
-                DTS:InstanceID="{9B4B13F4-9FF9-485B-8604-7E9BD1B47229}" />
+                DTS:InstanceID="{4270EC30-3102-40A4-8C4C-7DC62A3F38FC}" />
             </DTS:SelectedLogProviders>
           </DTS:LoggingOptions>
           <DTS:ObjectData>
@@ -1169,7 +1180,7 @@
           DTS:CreationName="Microsoft.ExpressionTask"
           DTS:DelayValidation="True"
           DTS:Description="Set Duration(Issue9)"
-          DTS:DTSID="{C71665A2-203D-461B-A2C9-7C4CFFAEA566}"
+          DTS:DTSID="{501923ED-392B-43F6-83B8-5DE9D30DBC2E}"
           DTS:ExecutableType="Microsoft.ExpressionTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Expression Task"
@@ -1178,14 +1189,14 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <ExpressionTask
-              Expression="@[User::varDuration] =DATEDIFF(&quot;Ms&quot;,@[User::varStartTime],GETDATE())" />
+              Expression="@[User::varDuration]=DATEDIFF(&quot;Ms&quot;,@[User::varStartTime],GETDATE())" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Loop Source Directory\FileCounter"
           DTS:CreationName="Microsoft.ScriptTask"
           DTS:Description="Script Task"
-          DTS:DTSID="{BBF85C88-FCC6-475A-AA9F-4709275EAD64}"
+          DTS:DTSID="{72820CDF-3A21-46C6-8851-46721EEA38EF}"
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="FileCounter"
@@ -1815,7 +1826,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:refId="Package\Loop Source Directory\Get File Properties"
           DTS:CreationName="Microsoft.ScriptTask"
           DTS:Description="Get properties and attributes of the Source File"
-          DTS:DTSID="{BB58E06B-4742-4E20-A12A-1154CF8A2D0E}"
+          DTS:DTSID="{E3382EA6-59F1-4922-AA92-129D2DD350D4}"
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Get File Properties"
@@ -1826,7 +1837,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             DTS:LoggingMode="1">
             <DTS:SelectedLogProviders>
               <DTS:SelectedLogProvider
-                DTS:InstanceID="{9B4B13F4-9FF9-485B-8604-7E9BD1B47229}" />
+                DTS:InstanceID="{4270EC30-3102-40A4-8C4C-7DC62A3F38FC}" />
             </DTS:SelectedLogProviders>
           </DTS:LoggingOptions>
           <DTS:ObjectData>
@@ -2450,7 +2461,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:refId="Package\Loop Source Directory\Logging on Success"
           DTS:CreationName="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
           DTS:Description="ZS Logging Task"
-          DTS:DTSID="{6265B13B-81CF-47B4-8F1B-0657C4D25BD3}"
+          DTS:DTSID="{E334C5F8-22A6-42B6-8D8A-6CA773A744FD}"
           DTS:ExecutableType="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
           DTS:LocaleID="-1"
           DTS:ObjectName="Logging on Success"
@@ -2468,7 +2479,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               LogVariableName=""
               MessageType="Information"
               LogMode="File"
-              LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_ie_{6922D76F-E494-4580-B05E-A05F19586E49}_2016091910421600_0"
+              LogFilePath="\\SendSource\D$\HIP\Logs\Send_Customer_ie_{856AB98A-8DA3-4D1F-81FC-C665F0142F05}_2016091910421700_0"
               LogFileAppend="True"
               LogDateTime="True"
               DateTimeFormat="HH:mm:ss:fff"
@@ -2476,20 +2487,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Loop Source Directory\Rename File"
+          DTS:refId="Package\Loop Source Directory\Rename Customer File"
           DTS:CreationName="Microsoft.FileSystemTask"
-          DTS:Description="Changes file extension"
-          DTS:DTSID="{DB0A998C-6562-401C-BAF1-08BFADBC92AA}"
+          DTS:Description="Changes File Extension from tmp to xml"
+          DTS:DTSID="{14CF9324-473E-4D94-A46A-BDD730635DFF}"
           DTS:ExecutableType="Microsoft.FileSystemTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Rename File"
+          DTS:ObjectName="Rename Customer File"
           DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
           DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <FileSystemData
               TaskOperationType="RenameFile"
-              TaskOverwriteDestFile="True"
               TaskSourcePath="User::varDestinationFileFullPath"
               TaskIsSourceVariable="True"
               TaskDestinationPath="User::varRenameFileFullPath"
@@ -2500,7 +2510,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:refId="Package\Loop Source Directory\Set varStartTime"
           DTS:CreationName="Microsoft.ScriptTask"
           DTS:Description="Sets StartDateTime variable used in logging"
-          DTS:DTSID="{E6B4BE8F-86D8-434A-851D-D31F205E2F73}"
+          DTS:DTSID="{E50EE5DF-D0E1-426A-A488-5330CE72233C}"
           DTS:ExecutableType="Microsoft.ScriptTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Set varStartTime"
@@ -3128,7 +3138,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{4E779C0C-4786-482A-84C5-8F099C2C38FD}"
+          DTS:DTSID="{D1C1E8D6-3DFB-4CA8-AA19-E9B459AAE215}"
           DTS:From="Package\Loop Source Directory\Set varStartTime"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -3136,7 +3146,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 1]"
           DTS:CreationName=""
-          DTS:DTSID="{2D3576D4-5C55-44DF-8C1E-5F2C086FCFE1}"
+          DTS:DTSID="{03191D85-6270-4401-9D92-AA11E24C1B4D}"
           DTS:From="Package\Loop Source Directory\Copy File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 1"
@@ -3144,15 +3154,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
-          DTS:DTSID="{25836448-C502-4501-9C3F-F0F86BA71FEB}"
+          DTS:DTSID="{BC31A972-FA88-4BD3-892D-817D6BE9FBE2}"
           DTS:From="Package\Loop Source Directory\Delete File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Loop Source Directory\Rename File" />
+          DTS:To="Package\Loop Source Directory\Rename Customer File" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
-          DTS:DTSID="{9AF694E0-BD3D-47CD-9BA6-6AB407FED99D}"
+          DTS:DTSID="{7A0E26B3-569B-4E15-BA52-F0910A85A6AB}"
           DTS:From="Package\Loop Source Directory\Get File Properties"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 3"
@@ -3160,7 +3170,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 4]"
           DTS:CreationName=""
-          DTS:DTSID="{91B102C7-2B17-4A3F-BACB-0AF1AED843C0}"
+          DTS:DTSID="{97432610-F647-4C05-9735-C132CE281C06}"
           DTS:From="Package\Loop Source Directory\Archive File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 4"
@@ -3168,7 +3178,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 5]"
           DTS:CreationName=""
-          DTS:DTSID="{522EC170-C825-4421-AD1A-07CE9FC80795}"
+          DTS:DTSID="{1D21E54D-D1EB-4F24-8E6F-899B76547B3E}"
           DTS:From="Package\Loop Source Directory\Logging on Success"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 5"
@@ -3176,7 +3186,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 6]"
           DTS:CreationName=""
-          DTS:DTSID="{2BE602B3-3B4B-4A1E-8520-2DEC10EADA4E}"
+          DTS:DTSID="{11989D58-70BD-4A6C-BF3B-047384F0E7AC}"
           DTS:From="Package\Loop Source Directory\Expression Task"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 6"
@@ -3184,8 +3194,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
           DTS:CreationName=""
-          DTS:DTSID="{2E888324-B0ED-496A-AF33-7C02FD793A0F}"
-          DTS:From="Package\Loop Source Directory\Rename File"
+          DTS:DTSID="{85183034-5377-4911-B7DD-26414B34293C}"
+          DTS:From="Package\Loop Source Directory\Rename Customer File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 7"
           DTS:To="Package\Loop Source Directory\Expression Task" />
@@ -3193,8 +3203,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{4D63A38D-9B4D-4977-A965-6CC3CCC771FE}"
-          DTS:ObjectName="{4D63A38D-9B4D-4977-A965-6CC3CCC771FE}"
+          DTS:DTSID="{3C2B62C1-6C86-47F5-A959-75BDFE30ECF4}"
+          DTS:ObjectName="{3C2B62C1-6C86-47F5-A959-75BDFE30ECF4}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varSourceFileFullPath" />
       </DTS:ForEachVariableMappings>
@@ -3203,7 +3213,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       DTS:refId="Package\Start Logging"
       DTS:CreationName="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:Description="ZS Logging Task"
-      DTS:DTSID="{EF048D0C-E21C-4A0B-9CAD-8CB3415AC541}"
+      DTS:DTSID="{C9E5DEB1-D37B-411E-B0A2-2D9F1F9AED24}"
       DTS:ExecutableType="ZappySys.PowerPack.Task.LoggingTask.LoggingTask, ZappySys.PowerPack120, Version=1.0.0.0, Culture=neutral, PublicKeyToken=1903265a93eae502"
       DTS:LocaleID="-1"
       DTS:ObjectName="Start Logging"
@@ -3220,7 +3230,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_ie_{6922D76F-E494-4580-B05E-A05F19586E49}_2016091910421600_0"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Customer_ie_{856AB98A-8DA3-4D1F-81FC-C665F0142F05}_2016091910421700_0"
           LogFileAppend="False"
           LogDateTime="False"
           DateTimeFormat="HH:mm:ss"
@@ -3232,7 +3242,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{F7011163-C805-4814-8342-DDAECCA3BE7A}"
+      DTS:DTSID="{72250E95-60A7-4698-8185-C52EC2E3F1E2}"
       DTS:From="Package\Loop Source Directory"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -3240,7 +3250,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{90CBB8DC-8532-4875-9922-BAD56098C630}"
+      DTS:DTSID="{87C2286F-BD1C-48F6-8C8F-413DBCAF1628}"
       DTS:From="Package\Log Summary"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -3248,7 +3258,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{10FDEF22-6D4B-48CB-8C9B-697204840D14}"
+      DTS:DTSID="{77B3F3BB-0942-41C7-A576-AC685A405E8F}"
       DTS:From="Package\Start Logging"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
@@ -3256,7 +3266,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[No files processed]"
       DTS:CreationName=""
-      DTS:DTSID="{7644064C-2E6D-47EA-8523-30D8402ABE92}"
+      DTS:DTSID="{14D2AF31-9EEA-4C20-B81A-C868D89FC72B}"
       DTS:EvalOp="3"
       DTS:Expression="@[User::varFilesHaveBeenProcessed]==False"
       DTS:From="Package\Have any files been processed"
@@ -3275,61 +3285,61 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="163,42"
           Id="Package\Clean Up Log File"
-          TopLeft="36.0000000000001,1231.5" />
+          TopLeft="36.0000000000002,1435.5" />
         <NodeLayout
           Size="224,42"
           Id="Package\Have any files been processed"
-          TopLeft="5.50000000000014,1129.5" />
+          TopLeft="5.50000000000017,1333.5" />
         <NodeLayout
           Size="146,42"
           Id="Package\Log Summary"
-          TopLeft="44.5000000000001,1027.5" />
+          TopLeft="44.5000000000002,1231.5" />
         <NodeLayout
           Size="135,42"
           Id="Package\Loop Source Directory\Archive File"
-          TopLeft="24.5,311.5" />
+          TopLeft="31.5000000000001,413.5" />
         <NodeLayout
           Size="124,42"
           Id="Package\Loop Source Directory\Copy File"
-          TopLeft="30,209.5" />
+          TopLeft="37,311.5" />
         <NodeLayout
           Size="130,42"
           Id="Package\Loop Source Directory\Delete File"
-          TopLeft="27.0000000000001,413.5" />
+          TopLeft="34.0000000000001,515.5" />
         <NodeLayout
           Size="157,42"
           Id="Package\Loop Source Directory\Expression Task"
-          TopLeft="13.5000000000001,515.5" />
+          TopLeft="20.5000000000001,719.5" />
         <NodeLayout
           Size="134,42"
           Id="Package\Loop Source Directory\FileCounter"
-          TopLeft="25.0000000000001,719.5" />
+          TopLeft="32.0000000000001,923.5" />
         <NodeLayout
           Size="167,42"
           Id="Package\Loop Source Directory\Get File Properties"
-          TopLeft="8.50000000000001,107.5" />
+          TopLeft="15.5,209.5" />
         <NodeLayout
           Size="173,42"
           Id="Package\Loop Source Directory\Logging on Success"
+          TopLeft="12.5000000000001,821.5" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Loop Source Directory\Rename Customer File"
           TopLeft="5.50000000000009,617.5" />
         <NodeLayout
           Size="160,42"
-          Id="Package\Loop Source Directory\Rename File"
-          TopLeft="29,467" />
-        <NodeLayout
-          Size="160,42"
           Id="Package\Loop Source Directory\Set varStartTime"
-          TopLeft="12,5.5" />
+          TopLeft="19,107.5" />
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint]"
-          TopLeft="92,47.5">
+          TopLeft="99,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3348,10 +3358,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 1]"
-          TopLeft="92,251.5">
+          TopLeft="99.0000000000001,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3370,24 +3380,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
-          TopLeft="157,434.5">
+          TopLeft="99.0000000000001,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-48.0000000000001,32.5"
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
               Start="0,0"
-              End="-48.0000000000001,25">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-44.0000000000001,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-44.0000000000001,0"
-                    Point2="-48.0000000000001,0"
-                    Point3="-48.0000000000001,4" />
-                  <mssgle:LineSegment
-                    End="-48.0000000000001,25" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3398,10 +3402,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
-          TopLeft="92,149.5">
+          TopLeft="99,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3420,10 +3424,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 4]"
-          TopLeft="92.0000000000001,353.5">
+          TopLeft="99.0000000000001,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3442,10 +3446,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 5]"
-          TopLeft="92.0000000000001,659.5">
+          TopLeft="99.0000000000001,863.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3464,10 +3468,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 6]"
-          TopLeft="92.0000000000001,557.5">
+          TopLeft="99.0000000000001,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3486,30 +3490,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
-          TopLeft="189,488">
+          TopLeft="99.0000000000001,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-18.4999999999999,48.5"
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
               Start="0,0"
-              End="-10.9999999999999,48.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,44.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,44.5"
-                    Point2="22.5,48.5"
-                    Point3="18.5,48.5" />
-                  <mssgle:LineSegment
-                    End="-10.9999999999999,48.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3521,40 +3513,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="218,817"
-          Size="218,860"
+          PanelSize="198,1021"
+          Size="198,1064"
           Id="Package\Loop Source Directory"
-          TopLeft="25.5000000000001,107.5" />
+          TopLeft="18.5000000000001,107.5" />
         <NodeLayout
           Size="144,42"
           Id="Package\Start Logging"
           TopLeft="45.5,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="134.5,967.5">
+          TopLeft="117.5,1171.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-17,60"
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
               Start="0,0"
-              End="-17,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-13,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13,30"
-                    Point2="-17,30"
-                    Point3="-17,34" />
-                  <mssgle:LineSegment
-                    End="-17,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3565,10 +3545,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="117.5,1069.5">
+          TopLeft="117.5,1273.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">
@@ -3590,27 +3570,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="117.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.0000000000001,60"
+              StartConnector="{x:Null}"
+              EndConnector="0,60"
               Start="0,0"
-              End="17.0000000000001,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="4,30" />
-                  <mssgle:LineSegment
-                    End="13.0000000000001,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.0000000000001,30"
-                    Point2="17.0000000000001,30"
-                    Point3="17.0000000000001,34" />
-                  <mssgle:LineSegment
-                    End="17.0000000000001,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3621,10 +3589,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[No files processed]"
-          TopLeft="117.5,1171.5">
+          TopLeft="117.5,1375.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{assembly:Null}"
+              StartConnector="{x:Null}"
               EndConnector="0,60"
               Start="0,0"
               End="0,52.5">

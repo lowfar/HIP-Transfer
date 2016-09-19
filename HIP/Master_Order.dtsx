@@ -1,125 +1,104 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="8/30/2016 9:58:22 AM"
+  DTS:CreationDate="9/8/2016 2:40:12 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="MP004146"
   DTS:CreatorName="MAMASANDPAPAS\m_haigh"
-  DTS:DTSID="{40EEDA77-7EAD-4879-9788-2C934E9AC167}"
+  DTS:DTSID="{4D4CA5F2-42C8-4AA1-B1AA-3F9FA07AEF61}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="12.0.4100.1"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Master_Customer"
+  DTS:ObjectName="Master_Order"
   DTS:PackageType="5"
-<<<<<<< HEAD
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{4495CA0F-49C0-4BC8-81B5-D88D8BDB3E14}">
-=======
   DTS:VersionBuild="2"
-  DTS:VersionGUID="{0710E381-F20A-454D-BBA3-9A1EA3F317EF}">
->>>>>>> issue_18/matth
+  DTS:VersionGUID="{077B7815-E43D-4A97-84BA-7989D8DCFDA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Customer Common"
+      DTS:refId="Package\Execute Order Common"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{BD3E0D72-CB18-44D3-99F8-4FBE5E400851}"
+      DTS:DTSID="{B580CC74-4D0B-4A43-81D4-41FCBCDEAB62}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Customer Common"
+      DTS:ObjectName="Execute Order Common"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Send_Customer_common.dtsx</PackageName>
+          <PackageName>Send_Order_common.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Customer Eu"
+      DTS:refId="Package\Execute Order EU"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
-      DTS:Disabled="True"
->>>>>>> issue_18/matth
-      DTS:DTSID="{9C7AFC5C-9C7B-4757-95CF-014BA746D96E}"
+      DTS:DTSID="{26BDE9EF-EAE2-44E4-8E99-24B4BBD74DB9}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Customer Eu"
+      DTS:ObjectName="Execute Order EU"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Send_Customer_eu.dtsx</PackageName>
+          <PackageName>Send_Order_eu.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Customer Ie"
+      DTS:refId="Package\Execute Order IE"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
-      DTS:Disabled="True"
->>>>>>> issue_18/matth
-      DTS:DTSID="{EEAF1857-03F1-4F5D-9066-E228EC778AAF}"
+      DTS:DTSID="{5FB2EB95-CD96-4ED8-BD65-10F8570BBCED}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Customer Ie"
+      DTS:ObjectName="Execute Order IE"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Send_Customer_ie.dtsx</PackageName>
+          <PackageName>Send_Order_ie.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Customer Uk"
+      DTS:refId="Package\Execute Order UK"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
-      DTS:Disabled="True"
->>>>>>> issue_18/matth
-      DTS:DTSID="{BA996C3C-141C-407E-B955-46E36FEFFC48}"
+      DTS:DTSID="{885DFCE5-E348-4876-A187-307A166DDCFF}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Customer Uk"
+      DTS:ObjectName="Execute Order UK"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Send_Product_uk.dtsx</PackageName>
+          <PackageName>Send_Order_uk.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Customer Us"
+      DTS:refId="Package\Execute Order US"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-<<<<<<< HEAD
-=======
-      DTS:Disabled="True"
->>>>>>> issue_18/matth
-      DTS:DTSID="{189D7922-DE50-4601-A99A-2DE885656742}"
+      DTS:DTSID="{72850CE1-C456-45BA-B89D-AD1082E5B373}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Customer Us"
+      DTS:ObjectName="Execute Order US"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Send_Product_us.dtsx</PackageName>
+          <PackageName>Send_Order_us.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -137,25 +116,25 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Customer Common"
-          TopLeft="150,108" />
+          Size="193,42"
+          Id="Package\Execute Order Common"
+          TopLeft="225,39" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Customer Eu"
-          TopLeft="413,104" />
+          Size="164,42"
+          Id="Package\Execute Order EU"
+          TopLeft="241,105" />
         <NodeLayout
-          Size="139,42"
-          Id="Package\Customer Ie"
-          TopLeft="180,172" />
+          Size="161,42"
+          Id="Package\Execute Order IE"
+          TopLeft="438,105" />
         <NodeLayout
-          Size="142,42"
-          Id="Package\Customer Uk"
-          TopLeft="415,181" />
+          Size="165,42"
+          Id="Package\Execute Order UK"
+          TopLeft="229,170" />
         <NodeLayout
-          Size="141,42"
-          Id="Package\Customer Us"
-          TopLeft="323,256" />
+          Size="164,42"
+          Id="Package\Execute Order US"
+          TopLeft="440,168" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

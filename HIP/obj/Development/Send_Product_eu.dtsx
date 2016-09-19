@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Send_Product_eu"
   DTS:PackageType="5"
-  DTS:VersionBuild="129"
-  DTS:VersionGUID="{6CA14C3F-4770-4E3C-8C50-063443EDCE9B}">
+  DTS:VersionBuild="133"
+  DTS:VersionGUID="{71127DBA-04E9-4A24-B4A3-0DB4EDC420E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -78,12 +78,12 @@
       DTS:Description="Full path of the destination file"
       DTS:DTSID="{F33A2C29-33D2-42F1-9CA7-8D2F1884ED66}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="REPLACE(@[User::varSourceFileFullPath],@[User::varSourceDirectory],@[$Project::PParDestinationSend] + &quot;\\master\\mamasnpapas-eu&quot;)"
+      DTS:Expression="REPLACE(REPLACE(@[User::varSourceFileFullPath],@[User::varSourceDirectory],@[$Project::PParDestinationSend] + &quot;\\master\\mamasnpapas-eu&quot;),&quot;.xml&quot;,&quot;.tmp&quot;)"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-eu\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-eu\product_20160817123456.tmp</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -134,7 +134,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogDate">
       <DTS:VariableValue
-        DTS:DataType="8">2016081912255700</DTS:VariableValue>
+        DTS:DataType="8">2016091910421600</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -146,7 +146,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016081912255700_0</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016091910421600_0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -183,7 +183,18 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogShortDate">
       <DTS:VariableValue
-        DTS:DataType="8">20160819</DTS:VariableValue>
+        DTS:DataType="8">20160919</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2AFF3A1F-9635-476F-B164-1ED4B6F4DC99}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::varDestinationFileFullPath],&quot;.tmp&quot;,&quot;.xml&quot;)"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varRenameFileFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-eu\product_20160817123456.xml</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -236,7 +247,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSummaryLog">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_eu_20160819</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_Product_eu_20160919</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -342,7 +353,7 @@
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_20160819"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_20160919"
           LogFileAppend="True"
           LogDateTime="True"
           DateTimeFormat="HH:mm:ss"
@@ -2457,11 +2468,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               LogVariableName=""
               MessageType="Information"
               LogMode="File"
-              LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016081912255700_0"
+              LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016091910421600_0"
               LogFileAppend="True"
               LogDateTime="True"
               DateTimeFormat="HH:mm:ss:fff"
               LoggingMode="Normal" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Loop Source Directory\Rename File"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Changes file extension"
+          DTS:DTSID="{2B1D72E7-C765-41E4-A18E-30098379FA75}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Rename File"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="RenameFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::varDestinationFileFullPath"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::varRenameFileFullPath"
+              TaskIsDestinationVariable="True" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -3112,11 +3144,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
-          DTS:DTSID="{1B778518-C7E0-4876-BFD3-AE1963830884}"
+          DTS:DTSID="{9F722E53-71A0-4A05-95E6-BFBEAEFF5A75}"
           DTS:From="Package\Loop Source Directory\Delete File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Loop Source Directory\Expression Task" />
+          DTS:To="Package\Loop Source Directory\Rename File" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
@@ -3149,6 +3181,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 6"
           DTS:To="Package\Loop Source Directory\Logging on Success" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{FDAD68B6-1B40-45B0-9C80-11A8627B69FB}"
+          DTS:From="Package\Loop Source Directory\Rename File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Loop Source Directory\Expression Task" />
       </DTS:PrecedenceConstraints>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
@@ -3180,7 +3220,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016081912255700_0"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_Product_eu_{34D73C79-8A25-42A8-AE83-0AB5687AC2D2}_2016091910421600_0"
           LogFileAppend="False"
           LogDateTime="False"
           DateTimeFormat="HH:mm:ss"
@@ -3251,34 +3291,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="135,42"
           Id="Package\Loop Source Directory\Archive File"
-          TopLeft="24.5,311.5" />
+          TopLeft="38.5,311.5" />
         <NodeLayout
           Size="124,42"
           Id="Package\Loop Source Directory\Copy File"
-          TopLeft="30,209.5" />
+          TopLeft="44,209.5" />
         <NodeLayout
           Size="130,42"
           Id="Package\Loop Source Directory\Delete File"
-          TopLeft="27.0000000000001,413.5" />
+          TopLeft="41.0000000000001,413.5" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Loop Source Directory\Expression Task"
+          TopLeft="36.5000000000001,528.5" />
         <NodeLayout
           Size="134,42"
           Id="Package\Loop Source Directory\FileCounter"
-          TopLeft="25.0000000000001,719.5" />
+          TopLeft="39.0000000000001,719.5" />
         <NodeLayout
           Size="167,42"
           Id="Package\Loop Source Directory\Get File Properties"
-          TopLeft="8.50000000000001,107.5" />
+          TopLeft="22.5,107.5" />
         <NodeLayout
           Size="173,42"
           Id="Package\Loop Source Directory\Logging on Success"
-          TopLeft="5.50000000000009,617.5" />
+          TopLeft="19.5000000000001,617.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Loop Source Directory\Rename File"
+          TopLeft="28,471" />
         <NodeLayout
           Size="160,42"
           Id="Package\Loop Source Directory\Set varStartTime"
-          TopLeft="12,5.5" />
+          TopLeft="26,5.5" />
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint]"
-          TopLeft="92,47.5">
+          TopLeft="106,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3300,7 +3348,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 1]"
-          TopLeft="92,251.5">
+          TopLeft="106,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3321,8 +3369,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
+          TopLeft="41.0000000000001,434.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.0000000000001,57.5"
+              Start="0,0"
+              End="-20.5000000000001,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-31.5000000000001,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-31.5000000000001,0"
+                    Point2="-35.5000000000001,0"
+                    Point3="-35.5000000000001,4" />
+                  <mssgle:LineSegment
+                    End="-35.5000000000001,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.5000000000001,53.5"
+                    Point2="-35.5000000000001,57.5"
+                    Point3="-31.5000000000001,57.5" />
+                  <mssgle:LineSegment
+                    End="-20.5000000000001,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
-          TopLeft="92,149.5">
+          TopLeft="106,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3344,7 +3426,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 4]"
-          TopLeft="92.0000000000001,353.5">
+          TopLeft="106,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3366,33 +3448,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 5]"
-          TopLeft="92.0000000000001,659.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Loop Source Directory\Expression Task"
-          TopLeft="13.5000000000001,515.5" />
-        <EdgeLayout
-          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
-          TopLeft="92.0000000000001,455.5">
+          TopLeft="106,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -3414,18 +3470,64 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 6]"
-          TopLeft="92.0000000000001,557.5">
+          TopLeft="115,570.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-9.00000000000003,47"
               Start="0,0"
-              End="0,52.5">
+              End="-9.00000000000003,39.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
+                  <mssgle:LineSegment
+                    End="-5.00000000000003,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.00000000000003,23.5"
+                    Point2="-9.00000000000003,23.5"
+                    Point3="-9.00000000000003,27.5" />
+                  <mssgle:LineSegment
+                    End="-9.00000000000003,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
+          TopLeft="28,497.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.50000000000011,51.8333333333333"
+              Start="0,0"
+              End="1.00000000000011,51.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,47.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,47.8333333333333"
+                    Point2="-22.5,51.8333333333333"
+                    Point3="-18.5,51.8333333333333" />
+                  <mssgle:LineSegment
+                    End="1.00000000000011,51.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3437,8 +3539,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="184,816"
-          Size="184,860"
+          PanelSize="244,817"
+          Size="244,860"
           Id="Package\Loop Source Directory"
           TopLeft="25.5000000000001,107.5" />
         <NodeLayout
@@ -3447,18 +3549,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="45.5,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="117.5,967.5">
+          TopLeft="147.5,967.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="-30,60"
               Start="0,0"
-              End="0,52.5">
+              End="-30,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-26,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26,30"
+                    Point2="-30,30"
+                    Point3="-30,34" />
+                  <mssgle:LineSegment
+                    End="-30,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3495,14 +3609,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="30.0000000000001,60"
               Start="0,0"
-              End="0,52.5">
+              End="30.0000000000001,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="26.0000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="26.0000000000001,30"
+                    Point2="30.0000000000001,30"
+                    Point3="30.0000000000001,34" />
+                  <mssgle:LineSegment
+                    End="30.0000000000001,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
