@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Send_mamasandpapas_common"
   DTS:PackageType="5"
-  DTS:VersionBuild="117"
-  DTS:VersionGUID="{0EDEECA0-08C0-43BD-81DA-479DC66A4103}">
+  DTS:VersionBuild="126"
+  DTS:VersionGUID="{F947D166-D017-4600-81E0-11CB3E777B5E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -47,19 +47,19 @@
       DTS:Namespace="User"
       DTS:ObjectName="varCopyFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\StockFile_20160817123456.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:Description="Full path of the destination file"
       DTS:DTSID="{07AE2B4F-EF19-401F-888C-0385BA15577B}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="REPLACE(@[User::varSourceFileFullPath],@[User::varSourceDirectory],@[$Project::PParDestinationSend] + &quot;\\master\\mamasnpapas-common&quot;)"
+      DTS:Expression="REPLACE(REPLACE(@[User::varSourceFileFullPath],@[User::varSourceDirectory],@[$Project::PParDestinationSend] + &quot;\\master\\mamasnpapas-common&quot;),@[User::varFileExtension],&quot;.tmp&quot;)"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varDestinationFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\StockFile_20160817123456.tmp</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -74,12 +74,12 @@
       DTS:CreationName=""
       DTS:DTSID="{549151F6-F802-4A50-9146-804330B71076}"
       DTS:EvaluateAsExpression="True"
-      DTS:Expression="LOWER(REVERSE(RIGHT(REVERSE(@[User::varFilename]),8)))==&quot;product_&quot;?True:False"
+      DTS:Expression="LOWER(REVERSE(RIGHT(REVERSE(@[User::varFilename]),8)))==&quot;product_&quot;?True:LOWER(REVERSE(RIGHT(REVERSE(@[User::varFilename]),9)))==&quot;customer_&quot;?True:LOWER(REVERSE(RIGHT(REVERSE(@[User::varFilename]),6)))==&quot;order_&quot;?True:False"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varExcludeFileFromProcess">
       <DTS:VariableValue
-        DTS:DataType="11">-1</DTS:VariableValue>
+        DTS:DataType="11">0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -104,6 +104,17 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
+      DTS:DTSID="{FD559B3D-4494-4E10-AEC4-4A1B902E3344}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REVERSE(SUBSTRING( REVERSE( @[User::varSourceFileFullPath] ), 1, FINDSTRING( REVERSE( @[User::varSourceFileFullPath] ), &quot;.&quot;,1 ) ))"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFileExtension">
+      <DTS:VariableValue
+        DTS:DataType="8">.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
       DTS:DTSID="{C2A096AB-BE09-4138-B440-BBB972767D2C}"
       DTS:EvaluateAsExpression="True"
       DTS:Expression="RIGHT( @[User::varSourceFileFullPath], FINDSTRING( REVERSE( @[User::varSourceFileFullPath] ), &quot;\\&quot;, 1 ) - 1 )"
@@ -111,7 +122,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varFilename">
       <DTS:VariableValue
-        DTS:DataType="8">product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">StockFile_20160817123456.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -132,7 +143,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogDate">
       <DTS:VariableValue
-        DTS:DataType="8">2016081912255700</DTS:VariableValue>
+        DTS:DataType="8">2016091910421600</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -144,7 +155,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogFile">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016081912255700_0</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016091910421600_0</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -181,7 +192,18 @@
       DTS:Namespace="User"
       DTS:ObjectName="varLogShortDate">
       <DTS:VariableValue
-        DTS:DataType="8">20160819</DTS:VariableValue>
+        DTS:DataType="8">20160919</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1F475AC5-B047-4555-8274-7A84928773CD}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE(@[User::varDestinationFileFullPath],&quot;.tmp&quot;,@[User::varFileExtension])"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varRenameFileFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\StockFile_20160817123456.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -213,7 +235,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSourceFileFullPath">
       <DTS:VariableValue
-        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\product_20160817123456.xml</DTS:VariableValue>
+        DTS:DataType="8">\\TheSendSource\d$\HybrisData\mamasnpapas-common\StockFile_20160817123456.csv</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -234,7 +256,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varSummaryLog">
       <DTS:VariableValue
-        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_20160819</DTS:VariableValue>
+        DTS:DataType="8">\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_20160919</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -340,7 +362,7 @@
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_20160819"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_20160919"
           LogFileAppend="True"
           LogDateTime="True"
           DateTimeFormat="HH:mm:ss"
@@ -1194,14 +1216,35 @@
               Language="CSharp"
               ReadWriteVariables="User::varFileCount">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_d743fabf90d44386bf624c732c20a26a")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("ST_d743fabf90d44386bf624c732c20a26a")]
+[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -1586,35 +1629,14 @@ namespace ST_d743fabf90d44386bf624c732c20a26a.Properties {
   </ProjectExtensions>
 </Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_d743fabf90d44386bf624c732c20a26a")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ST_d743fabf90d44386bf624c732c20a26a")]
-[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -1825,36 +1847,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadWriteVariables="User::varSize,User::varSourceFileFullPath">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_b6226b484ff54e4295cfdd8b1df3495e")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ST_b6226b484ff54e4295cfdd8b1df3495e")]
-[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -1973,6 +1965,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b6226b484ff54e4295cfdd8b1df3495e.Properties.Settings.get_Default():ST_b6226b484ff54e4295cfdd8b1df3495e.Properties.Sett" +
+    "ings")]
+
+namespace ST_b6226b484ff54e4295cfdd8b1df3495e.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ST_b6226b484ff54e4295cfdd8b1df3495e.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2208,34 +2229,35 @@ namespace ST_b6226b484ff54e4295cfdd8b1df3495e
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_b6226b484ff54e4295cfdd8b1df3495e")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("ST_b6226b484ff54e4295cfdd8b1df3495e")]
+[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b6226b484ff54e4295cfdd8b1df3495e.Properties.Settings.get_Default():ST_b6226b484ff54e4295cfdd8b1df3495e.Properties.Sett" +
-    "ings")]
-
-namespace ST_b6226b484ff54e4295cfdd8b1df3495e.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -2456,11 +2478,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               LogVariableName=""
               MessageType="Information"
               LogMode="File"
-              LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016081912255700_0"
+              LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016091910421600_0"
               LogFileAppend="True"
               LogDateTime="True"
               DateTimeFormat="HH:mm:ss:fff"
               LoggingMode="Normal" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Loop Source Directory\Rename File"
+          DTS:CreationName="Microsoft.FileSystemTask"
+          DTS:Description="Changes file extension"
+          DTS:DTSID="{230234DB-7B20-480E-A239-5D6C30DD1E02}"
+          DTS:ExecutableType="Microsoft.FileSystemTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Rename File"
+          DTS:TaskContact="File System Task;Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <FileSystemData
+              TaskOperationType="RenameFile"
+              TaskOverwriteDestFile="True"
+              TaskSourcePath="User::varDestinationFileFullPath"
+              TaskIsSourceVariable="True"
+              TaskDestinationPath="User::varRenameFileFullPath"
+              TaskIsDestinationVariable="True" />
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
@@ -2482,36 +2525,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               VSTAMinorVersion="0"
               Language="CSharp"
               ReadWriteVariables="varStartTime">
-              <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_d1f404bac674460d94eda6964c9e1f5e")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("ST_d1f404bac674460d94eda6964c9e1f5e")]
-[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2631,6 +2644,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1f404bac674460d94eda6964c9e1f5e.Properties.Settings.get_Default():ST_d1f404bac674460d94eda6964c9e1f5e.Properties.Sett" +
+    "ings")]
+
+namespace ST_d1f404bac674460d94eda6964c9e1f5e.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ST_d1f404bac674460d94eda6964c9e1f5e.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2864,34 +2906,35 @@ namespace ST_d1f404bac674460d94eda6964c9e1f5e
 	</msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_d1f404bac674460d94eda6964c9e1f5e")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("ST_d1f404bac674460d94eda6964c9e1f5e")]
+[assembly: AssemblyCopyright("Copyright @ Microsoft 2016")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_d1f404bac674460d94eda6964c9e1f5e.Properties.Settings.get_Default():ST_d1f404bac674460d94eda6964c9e1f5e.Properties.Sett" +
-    "ings")]
-
-namespace ST_d1f404bac674460d94eda6964c9e1f5e.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -3111,11 +3154,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
           DTS:CreationName=""
-          DTS:DTSID="{DBED497B-8F77-4C41-8ED7-CC85A9BB1D43}"
+          DTS:DTSID="{DDC69EFD-4A4A-4349-A9D1-35855ED48D4A}"
           DTS:From="Package\Loop Source Directory\Delete File"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Loop Source Directory\Expression Task" />
+          DTS:To="Package\Loop Source Directory\Rename File" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
           DTS:CreationName=""
@@ -3148,6 +3191,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint 6"
           DTS:To="Package\Loop Source Directory\Logging on Success" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
+          DTS:CreationName=""
+          DTS:DTSID="{778770BA-A66C-4B11-9DD0-DCF71B5C8298}"
+          DTS:From="Package\Loop Source Directory\Rename File"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 7"
+          DTS:To="Package\Loop Source Directory\Expression Task" />
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Loop Source Directory.PrecedenceConstraints[ProcessFile]"
           DTS:CreationName=""
@@ -3190,7 +3241,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           LogVariableName=""
           MessageType="Information"
           LogMode="File"
-          LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016081912255700_0"
+          LogFilePath="\\SendSource\D$\HIP\Logs\Send_mamasandpapas_common_{13FC96DC-2895-4E1F-9F54-C2573D33EA22}_2016091910421600_0"
           LogFileAppend="False"
           LogDateTime="False"
           DateTimeFormat="HH:mm:ss"
@@ -3261,42 +3312,42 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="135,42"
           Id="Package\Loop Source Directory\Archive File"
-          TopLeft="31.5000000000001,413.5" />
+          TopLeft="42.5000000000001,413.5" />
         <NodeLayout
           Size="124,42"
           Id="Package\Loop Source Directory\Copy File"
-          TopLeft="37,311.5" />
+          TopLeft="48,311.5" />
         <NodeLayout
           Size="130,42"
           Id="Package\Loop Source Directory\Delete File"
-          TopLeft="34.0000000000001,515.5" />
+          TopLeft="45.0000000000001,515.5" />
         <NodeLayout
           Size="187,42"
           Id="Package\Loop Source Directory\Evaluate File Exclusion"
-          TopLeft="5.5,5.5" />
+          TopLeft="16.5,5.5" />
         <NodeLayout
           Size="157,42"
           Id="Package\Loop Source Directory\Expression Task"
-          TopLeft="20.5000000000001,617.5" />
+          TopLeft="31.5000000000001,617.5" />
         <NodeLayout
           Size="134,42"
           Id="Package\Loop Source Directory\FileCounter"
-          TopLeft="32.0000000000001,821.5" />
+          TopLeft="43.0000000000001,821.5" />
         <NodeLayout
           Size="167,42"
           Id="Package\Loop Source Directory\Get File Properties"
-          TopLeft="15.5,209.5" />
+          TopLeft="26.5,209.5" />
         <NodeLayout
           Size="173,42"
           Id="Package\Loop Source Directory\Logging on Success"
-          TopLeft="12.5000000000001,719.5" />
+          TopLeft="23.5000000000001,719.5" />
         <NodeLayout
           Size="160,42"
           Id="Package\Loop Source Directory\Set varStartTime"
-          TopLeft="19,107.5" />
+          TopLeft="30,107.5" />
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint]"
-          TopLeft="99,149.5">
+          TopLeft="110,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3318,29 +3369,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 1]"
-          TopLeft="99.0000000000001,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
-          TopLeft="99.0000000000001,557.5">
+          TopLeft="110,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3362,7 +3391,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 3]"
-          TopLeft="99,251.5">
+          TopLeft="110,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3384,7 +3413,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 4]"
-          TopLeft="99.0000000000001,455.5">
+          TopLeft="110,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3406,7 +3435,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 5]"
-          TopLeft="99.0000000000001,761.5">
+          TopLeft="110,761.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3428,7 +3457,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 6]"
-          TopLeft="99.0000000000001,659.5">
+          TopLeft="110,659.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3450,7 +3479,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Loop Source Directory.PrecedenceConstraints[ProcessFile]"
-          TopLeft="99,47.5">
+          TopLeft="110,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
@@ -3472,11 +3501,83 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Loop Source Directory\Rename File"
+          TopLeft="28,566" />
+        <EdgeLayout
+          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 2]"
+          TopLeft="175,536.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="12.9999999999999,50.5"
+              Start="0,0"
+              End="20.4999999999999,50.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="31.4999999999999,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.4999999999999,0"
+                    Point2="35.4999999999999,0"
+                    Point3="35.4999999999999,4" />
+                  <mssgle:LineSegment
+                    End="35.4999999999999,46.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.4999999999999,46.5"
+                    Point2="35.4999999999999,50.5"
+                    Point3="31.4999999999999,50.5" />
+                  <mssgle:LineSegment
+                    End="20.4999999999999,50.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Loop Source Directory.PrecedenceConstraints[Constraint 7]"
+          TopLeft="28,587">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="3.5000000000001,51.5"
+              Start="0,0"
+              End="-3.9999999999999,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,47.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,47.5"
+                    Point2="-22.5,51.5"
+                    Point3="-18.5,51.5" />
+                  <mssgle:LineSegment
+                    End="-3.9999999999999,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="198,918"
-          Size="198,962"
+          PanelSize="216,919"
+          Size="216,962"
           Id="Package\Loop Source Directory"
           TopLeft="18.5000000000001,107.5" />
         <NodeLayout
@@ -3485,18 +3586,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="45.5,5.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="117.5,1069.5">
+          TopLeft="126.5,1069.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,60"
+              EndConnector="-9,60"
               Start="0,0"
-              End="0,52.5">
+              End="-9,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,30"
+                    Point2="-9,30"
+                    Point3="-9,34" />
+                  <mssgle:LineSegment
+                    End="-9,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3533,14 +3646,26 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{x:Null}"
-              EndConnector="0,60"
+              EndConnector="9.0000000000001,60"
               Start="0,0"
-              End="0,52.5">
+              End="9.0000000000001,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="5.0000000000001,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.0000000000001,30"
+                    Point2="9.0000000000001,30"
+                    Point3="9.0000000000001,34" />
+                  <mssgle:LineSegment
+                    End="9.0000000000001,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
